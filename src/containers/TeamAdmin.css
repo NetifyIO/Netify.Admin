@@ -1,0 +1,13 @@
+.TeamAdmin {
+    position: relative;
+    font-family: 'Titillium Web', sans-serif
+}
+
+.content-section {
+    position: relative;
+    margin-left: 240px;
+}
+
+.content {
+    margin: 15px;
+}
