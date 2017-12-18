@@ -25,9 +25,9 @@ const users = [
 ];
 
 //This would be performed on the server in a real app. Just stubbing in.
-const generateId = (user) => {
-  return user.firstName.toLowerCase() + '-' + user.lastName.toLowerCase();
-};
+//const generateId = (user) => {
+//   return user.firstName.toLowerCase() + '-' + user.lastName.toLowerCase();
+//};
 
 class UserApi {
   static getAllUsers() {

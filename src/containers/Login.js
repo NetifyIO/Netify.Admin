@@ -3,7 +3,7 @@ import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as sessionActions from '../actions/sessionActions';
-import fakeAuth from '../service/auth';
+// import fakeAuth from '../service/auth';
 
 class Login extends React.Component {
 

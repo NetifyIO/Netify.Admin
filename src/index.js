@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, 
+  // Redirect 
+} from 'react-router-dom';
 import Login from './containers/Login';
 import TeamAdmin from './containers/TeamAdmin';
-import fakeAuth from './service/auth';
+// import fakeAuth from './service/auth';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -31,18 +33,18 @@ ReactDOM.render(
 );
 
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (
-    fakeAuth.isAuthenticated ? (
-      <Component {...props}/>
-    ) : (
-      <Redirect to={{
-        pathname: '/login',
-        state: { from: props.location }
-      }}/>
-    )
-  )}/>
-)
+// const PrivateRoute = ({ component: Component, ...rest }) => (
+//   <Route {...rest} render={props => (
+//     fakeAuth.isAuthenticated ? (
+//       <Component {...props}/>
+//     ) : (
+//       <Redirect to={{
+//         pathname: '/login',
+//         state: { from: props.location }
+//       }}/>
+//     )
+//   )}/>
+// )
 
 
 registerServiceWorker();

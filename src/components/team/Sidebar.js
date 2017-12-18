@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './Sidebar.css';
 import TeamLogo from './images/team-logo.png';
-import ap from '../../service/nav';
+// import ap from '../../service/nav';
 
 class Sidebar extends React.Component {
 

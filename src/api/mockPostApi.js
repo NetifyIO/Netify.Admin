@@ -50,7 +50,7 @@ class PostApi {
         }
 
         if (post.id) {
-          const existingPostIndex = posts.findIndex(a => a.id == post.id);
+          const existingPostIndex = posts.findIndex(a => a.id === post.id);
           posts.splice(existingPostIndex, 1, post);
         } else {
           //Just simulating creation here.
@@ -69,7 +69,7 @@ class PostApi {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const indexOfPostToDelete = posts.findIndex(post => {
-          post.id == postId;
+          return post.id === postId;
         });
         posts.splice(indexOfPostToDelete, 1);
         resolve();
