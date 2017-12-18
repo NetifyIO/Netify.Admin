@@ -36,4 +36,4 @@ appsettings.Development.json
 *.userprefs
 
 node_modules/
-
+wwwroot/

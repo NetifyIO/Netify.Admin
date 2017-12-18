@@ -17,14 +17,20 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postbuild": "yarn run copy-to-wwwroot",
+    "postbuild": "yarn run copy-to-wwwroot && yarn run remove-build",
     "clean": "rimraf wwwroot",
     "copy-to-wwwroot": "yarn run clean && ncp ./build ./wwwroot",
+    "remove-build": "rimraf build",
     "fullbuild": "yarn build && dotnet build && dotnet publish"
   },
-  "homepage": "http://netify.io/admin",
+  "homepage": "http://admin.netify.io/",
   "proxy": "http://localhost:5001",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "minimist": "^1.2.0",
+    "vinyl-ftp": "^0.6.0",
     "ncp": "^2.0.0"
   }
 }

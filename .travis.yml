@@ -1,0 +1,15 @@
+language: csharp
+solution: Netify.Admin.sln
+mono: none
+dotnet: 2.0.3
+install:
+- dotnet restore
+- npm install -g gulp
+- npm install -g yarn
+- npm install
+script:
+- dotnet build
+- yarn build
+- dotnet publish ./Netify.Admin.csproj --output ./publish
+after_success:
+- gulp deploy --user $FTP_USER --password $FTP_PASSWORD
