@@ -27,12 +27,7 @@ namespace Netify.Admin
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                // todo: figure out how to remove hardcoded /admin.
-                // possibly in appsettings.
-                 RequestPath = new PathString("/admin")
-            });
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {
